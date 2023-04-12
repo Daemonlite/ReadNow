@@ -5,6 +5,10 @@ const storySchema = new mongoose.Schema({
         type:String,
         require:true
     },
+    coverImage:{
+        type:String,
+        require:true
+    },
     author:{
         type:String,
         require:true
