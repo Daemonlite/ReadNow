@@ -12,6 +12,17 @@ const chapterSchema = new mongoose.Schema({
       chapterNumber: {
         type: Number,
         required: true
+      },
+      //leave a message for readers
+      chapterNote:{
+        type: String,
+        required: false
+      },
+      comments:{
+        type:Array
+      },
+      likes:{
+        type:Array
       }
 },{
     timestamps:true
