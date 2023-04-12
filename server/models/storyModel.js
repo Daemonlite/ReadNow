@@ -16,6 +16,10 @@ const storySchema = new mongoose.Schema({
     chapters:{
         type:Array
     },
+    category:{
+        type:String,
+        require:true
+    },
     user:{
         type:mongoose.Schema.Types.ObjectId
     }
