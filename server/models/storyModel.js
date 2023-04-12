@@ -28,6 +28,12 @@ const storySchema = new mongoose.Schema({
     rating:{
         type:Array
     },
+    comments:{
+        type:Array
+      },
+      likes:{
+        type:Array
+      },
     user:{
         type:mongoose.Schema.Types.ObjectId
     }

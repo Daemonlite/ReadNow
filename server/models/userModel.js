@@ -39,6 +39,9 @@ const userSchema = new mongoose.Schema({
     },
     subscribers:{
         type:Array
+    },
+    library:{
+        type:Array
     }
  
 },{
