@@ -5,12 +5,19 @@ const storySchema = new mongoose.Schema({
         type:String,
         require:true
     },
+    author:{
+        type:String,
+        require:true
+    },
     descr:{
         type:String,
         require:true
     },
     chapters:{
         type:Array
+    },
+    user:{
+        type:mongoose.Schema.Types.ObjectId
     }
 },{
     timestamps:true
