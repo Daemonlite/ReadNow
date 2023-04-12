@@ -20,6 +20,14 @@ const storySchema = new mongoose.Schema({
         type:String,
         require:true
     },
+    //in order to specify age limit
+    PG:{
+        type:String,
+        require:true
+    },
+    rating:{
+        type:Array
+    },
     user:{
         type:mongoose.Schema.Types.ObjectId
     }
