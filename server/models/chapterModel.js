@@ -17,6 +17,12 @@ const chapterSchema = new mongoose.Schema({
       chapterNote:{
         type: String,
         required: false
+      },
+      comments:{
+        type:Array
+      },
+      likes:{
+        type:Array
       }
 },{
     timestamps:true
