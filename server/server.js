@@ -12,6 +12,7 @@ app.use(express.urlencoded({extended:false}))
 
 //routes
 app.use('/api/users',require('./routes/userRoutes'))
+app.use('/api/stories',require('./routes/storyRoutes'))
 
 //server
 app.listen(port,console.log(`SERVER RUNNING ON PORT ${port}`))
