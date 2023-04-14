@@ -18,6 +18,9 @@ const chapterSchema = new mongoose.Schema({
         type: String,
         required: false
       },
+      story:{
+        type:mongoose.Schema.Types.ObjectId
+      },
       comments:{
         type:Array
       },
