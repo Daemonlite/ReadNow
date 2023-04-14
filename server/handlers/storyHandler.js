@@ -81,3 +81,25 @@ const updateStory = async (req,res) => {
     res.status(500).json({ message: "Failed to update story info" });
   }
 }
+
+const deleteStory = async (req,res) => {
+  try {
+    const { id } = req.params;
+    const deletedStory = await User.findByIdAndDelete(id);
+    if (!deletedStory) {
+      return res.status(404).json({ message: "Story not found" });
+    }
+    return res.status(200).json({ message: "Story deleted successfully" });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "Failed to delete Story" });
+  }
+}
+
+module.exports = {
+  getStories,
+  getStoryById,
+  createStory,
+  updateStory,
+  deleteStory
+}
