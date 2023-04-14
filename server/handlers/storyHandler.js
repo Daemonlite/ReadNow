@@ -39,10 +39,20 @@ const createStory = async (req,res) => {
   return res.status(400).json({message:"Fill out require fields"})
 
  }
+
+ let cover;
+ try {
+   const image = req.file;
+   const result = await cloudinary.uploader.upload(coverImage);
+   cover = result.secure_url;
+ } catch (error) {
+   console.error(error);
+   return res.status(400).json({ message: "Failed to upload profile image" });
+ }
  
 const story = new Story({
   title,
-  coverImage,
+  coverImage:cover,
   author,
   descr,
   category,
