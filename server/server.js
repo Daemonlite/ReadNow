@@ -16,6 +16,7 @@ connectDb()
 //routes
 app.use('/api/users',require('./routes/userRoutes'))
 app.use('/api/stories',require('./routes/storyRoutes'))
+app.use('/api/chapters',require('./routes/chapterRoutes'))
 
 //server
 app.listen(port,console.log(`SERVER RUNNING ON PORT ${port}`))
