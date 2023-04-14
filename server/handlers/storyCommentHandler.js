@@ -55,3 +55,37 @@ const addComment = async (req,res) => {
       }
       return res.status(201).json(comment);
 }
+
+const deleteComment = async (req,res) => {
+    const id = req.params.id;
+
+    let comment;
+    try {
+      comment = await Comment.findOne({ _id: id });
+      if (!comment) {
+        return res
+          .status(404)
+          .json({ message: "The specified comment was not found." });
+      }
+      await comment.deleteOne({ _id: id });
+      await Story.updateOne(
+        { _id: comment.story },
+        { $pull: { comments: { _id: comment._id } } }
+      );
+    } catch (err) {
+      return res.status(500).json({
+        message:
+          "Unable to delete the  comment. An internal server error has occurred.",
+      });
+    }
+    return res
+      .status(200)
+      .json({ message: "Successfully deleted the  comment." });
+}
+
+module.exports = {
+    getComments,
+    getcommentById,
+    addComment,
+    deleteComment
+}
