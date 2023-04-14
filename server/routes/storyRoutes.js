@@ -8,7 +8,7 @@ const {
 } = require("../handlers/storyHandler");
 const { verifyToken } = require("../middleware/verify");
 
-router.get("/", verifyToken, getStories);
+router.get("/", getStories);
 router.get("/:id", verifyToken, getStoryById);
 router.post("/", verifyToken, createStory);
 router.put("/:id", verifyToken, updateStory);
