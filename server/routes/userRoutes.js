@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {getUsers,register,loginUser,updateUserInfo,deleteUser,getUserById} = require('../handlers/userHandlers')
+const {getUsers,register,loginUser,updateUserInfo,deleteUser,getUserById} = require('../handlers/userHandler')
 const {verifyToken} = require('../middleware/verify')
 
 router.get('/',verifyToken,getUsers)
