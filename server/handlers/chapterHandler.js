@@ -1,16 +1,6 @@
 const Chapter = require('../models/chapterModel')
 const Story = require('../models/storyModel')
 
-const cloudinary = require("cloudinary").v2;
-
-
-// Configure Cloudinary
-cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SECRET,
-});
-
 const getChapters = async (req,res) => {
     try {
         const chapter = await Chapter.find();
@@ -33,3 +23,62 @@ const getchapterById = async (req,res) => {
         res.status(500).json({ message: "Failed to retrieve chapter" });
       }
 }
+
+const createChapter = async (req,res) => {
+    const {title,content,chapterNumber,chapterNote,story} = req.body
+
+    if(!title || !content || !chapterNumber || !chapterNote){
+        return res.status(400).json({
+            message:"fill out required fields"
+        })
+    }
+
+    let createdStory;
+    try {
+        createdStory = Story.findById(story)
+    } catch (error) {
+        console.log(error)
+    }
+
+    const chapter = new Chapter({
+        title,
+        content,chapterNumber,chapterNote,story 
+    })
+
+    try {
+        await chapter.save()
+        createdStory.chapters.unshift(chapter)
+        await createdStory.save()
+    } catch (error) {
+        console.log(error);
+        res.status(400).json({ error: error });
+    }
+    return res.status(201).json(chapter)
+}
+
+const deleteChapter = async (req, res) => {
+    const id = req.params.id;
+  
+    let chapter;
+    try {
+      chapter = await Chapter.findOne({ _id: id });
+      if (!chapter) {
+        return res
+          .status(404)
+          .json({ message: "The specified chapter was not found." });
+      }
+      await chapter.deleteOne({ _id: id });
+      await Story.updateOne(
+        { _id: chapter.com },
+        { $pull: { chapters: { _id: chapter._id } } }
+      );
+    } catch (err) {
+      return res.status(500).json({
+        message:
+          "Unable to delete the  chapter. An internal server error has occurred.",
+      });
+    }
+    return res
+      .status(200)
+      .json({ message: "Successfully deleted the  chapter." });
+  }
