@@ -82,3 +82,10 @@ const deleteChapter = async (req, res) => {
       .status(200)
       .json({ message: "Successfully deleted the  chapter." });
   }
+
+  module.exports = {
+    getChapters,
+    getchapterById,
+    createChapter,
+    deleteChapter
+  }
