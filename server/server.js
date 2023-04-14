@@ -3,6 +3,7 @@ const dotenv = require('dotenv' ).config()
 const app = express()
 const cors = require('cors')
 const port = 8000
+const connectDb = require('./database/connect')
 
 
 //middlewares
@@ -10,6 +11,8 @@ app.use((cors()))
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
+//db connection 
+connectDb()
 //routes
 app.use('/api/users',require('./routes/userRoutes'))
 app.use('/api/stories',require('./routes/storyRoutes'))
