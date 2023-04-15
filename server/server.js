@@ -18,7 +18,7 @@ app.use('/api/users',require('./routes/userRoutes'))
 app.use('/api/stories',require('./routes/storyRoutes'))
 app.use('/api/chapters',require('./routes/chapterRoutes'))
 app.use('/api/comments/story',require('./routes/storyCommentRoutes'))
-app.use('/api/chapter/comment'),require('./routes/chapterCommentRoutes')
+app.use('/api/comments/chapter',require('./routes/chapterCommentRoutes'))
 
 //server
 app.listen(port,console.log(`SERVER RUNNING ON PORT ${port}`))
