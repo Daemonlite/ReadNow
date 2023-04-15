@@ -13,7 +13,7 @@ const getComments = async (req,res) => {
 
 const getcommentById = async (req, res) => {
     try {
-      const comment = await Comment.findById(req.params.id);
+      const comment = await chapterComment.findById(req.params.id);
       if (!comment) {
         return res.status(404).json({ message: "comment not found" });
       }
@@ -61,7 +61,7 @@ const deleteComment = async (req,res) => {
 
     let comment;
     try {
-      comment = await Comment.findOne({ _id: id });
+      comment = await chapterComment.findOne({ _id: id });
       if (!comment) {
         return res
           .status(404)
@@ -69,7 +69,7 @@ const deleteComment = async (req,res) => {
       }
       await comment.deleteOne({ _id: id });
       await Chapter.updateOne(
-        { _id: comment.story },
+        { _id: comment.chapter },
         { $pull: { comments: { _id: comment._id } } }
       );
     } catch (err) {
