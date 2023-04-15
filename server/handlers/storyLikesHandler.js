@@ -86,5 +86,6 @@ const unlikeStory = async (req,res) => {
 module.exports = {
     getLikeById,
     getLikes,
-    likeStory
+    likeStory,
+    unlikeStory
 }
