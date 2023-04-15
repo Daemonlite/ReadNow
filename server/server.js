@@ -19,6 +19,6 @@ app.use('/api/stories',require('./routes/storyRoutes'))
 app.use('/api/chapters',require('./routes/chapterRoutes'))
 app.use('/api/comments/story',require('./routes/storyCommentRoutes'))
 app.use('/api/comments/chapter',require('./routes/chapterCommentRoutes'))
-
+app.use('/api/story/like',require('./routes/storyLikeRoutes'))
 //server
 app.listen(port,console.log(`SERVER RUNNING ON PORT ${port}`))
