@@ -1,9 +1,9 @@
-const StoryComment = require('../models/storyComment')
-const Story = require('../models/storyModel')
+const chapterComment = require('../models/chapterComment')
+const Chapter = require('../models/chapterModel')
 
 const getComments = async (req,res) => {
     try {
-        const story = await StoryComment.find();
+        const story = await  chapterComment.find();
         res.json(story);
       } catch (error) {
         console.error(error);
@@ -13,7 +13,7 @@ const getComments = async (req,res) => {
 
 const getcommentById = async (req, res) => {
     try {
-      const comment = await StoryComment.findById(req.params.id);
+      const comment = await Comment.findById(req.params.id);
       if (!comment) {
         return res.status(404).json({ message: "comment not found" });
       }
@@ -25,30 +25,30 @@ const getcommentById = async (req, res) => {
   };
 
 const addComment = async (req,res) => {
-    const {userProfile,userName,content,story} = req.body
+    const {userProfile,userName,content,chapter} = req.body
 
-    if(!userProfile || !userName || !content || !story){
+    if(!userProfile || !userName || !content || !chapter){
         return res.status(400).json({messge:"fill out required fields"})
     }
 
-    let createdStory;
+    let createdChapter;
     try {
-      createdStory = await Story.findById(story);
+      createdChapter = await Chapter.findById(chapter);
     } catch (error) {
       console.log(error);
     }
     
-    const comment = new StoryComment({
+    const comment = new chapterComment({
         userProfile,
         userName,
         content,
-        story
+        chapter
     })
 
     try {
         await comment.save();
-        createdStory.comments.unshift(comment);
-        await createdStory.save();
+        createdChapter.comments.unshift(comment);
+        await createdChapter.save();
       } catch (error) {
         console.log(error);
         res.status(400).json({ error: error });
@@ -61,14 +61,14 @@ const deleteComment = async (req,res) => {
 
     let comment;
     try {
-      comment = await StoryComment.findOne({ _id: id });
+      comment = await Comment.findOne({ _id: id });
       if (!comment) {
         return res
           .status(404)
           .json({ message: "The specified comment was not found." });
       }
       await comment.deleteOne({ _id: id });
-      await Story.updateOne(
+      await Chapter.updateOne(
         { _id: comment.story },
         { $pull: { comments: { _id: comment._id } } }
       );
