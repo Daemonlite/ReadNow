@@ -1,5 +1,6 @@
 const Library = require('../models/libraryModel')
 const User = require('../models/userModel')
+const Story = require('../models/storyModel')
 
 const getLibraries = async (req, res) => {
     try {
@@ -83,6 +84,18 @@ const getLibraries = async (req, res) => {
       .json({ message: "Successfully deleted the  comment." });
 }
 
+const addStory = async (req,res) => {
+    const {story} = req.body
+
+    let existingStory;
+    try {
+        existingStory = await Story.findById(Story)
+    } catch (error) {
+        console.log(error)
+    }
+
+    
+}
 
 
 module.exports = {
