@@ -15,7 +15,8 @@ const librarySchema = new mongoose.Schema({
     },
     stories:{
         type:Array
-    }
+    },
+    
 },{
     timestamps:true
 })
