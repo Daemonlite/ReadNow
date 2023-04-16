@@ -23,3 +23,35 @@ const geLibraries = async (req, res) => {
       res.status(500).json({ message: "Failed to retrieve library" });
     }
   };
+
+  const createLibrary = async (req,res) => {
+    const {name,descr,user} = req.body
+
+    if(!name || !descr || !user){
+        return res.status(400).json({message:"fill in required fields"})
+    }
+
+    let existingUser;
+    try {
+        existingUser = User.findById(user)
+    } catch (error) {
+        console.log(error)
+    }
+
+    const lib = new Library({
+        name,
+        descr,
+        user,
+        stories:[]
+    })
+
+    try {
+        await lib.save()
+        existingUser.library.unshift(lib)
+        existingUser.save()
+    } catch (error) {
+        console.log(error)
+        res.status(400).json({ error: error });
+    }
+    return res.status(201).json(lib);
+  }

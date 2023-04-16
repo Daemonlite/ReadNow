@@ -6,9 +6,12 @@ const librarySchema = new mongoose.Schema({
         type:String,
         rquire:true
     },
-    decsr:{
+    descr:{
         type:String,
         rquire:true 
+    },
+    user:{
+        type:mongoose.Schema.Types.ObjectId
     },
     stories:{
         type:Array
