@@ -40,6 +40,9 @@ const storySchema = new mongoose.Schema({
       },
     user:{
         type:mongoose.Schema.Types.ObjectId
+    },
+    reads:{
+        type:Array
     }
 },{
     timestamps:true
