@@ -81,3 +81,10 @@ const getSubscriberById = async (req, res) => {
       .status(200)
       .json({ message: "Successfully deleted the  comment." });
   }
+
+module.exports = {
+    getSubscriberById,
+    getSubscribers,
+    addSubscriber,
+    unSubscribe
+}
