@@ -33,7 +33,7 @@ const getLibraries = async (req, res) => {
 
     let existingUser;
     try {
-        existingUser = User.findById(user)
+        existingUser = await User.findById(user)
     } catch (error) {
         console.log(error)
     }
