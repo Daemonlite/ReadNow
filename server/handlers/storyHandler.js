@@ -62,6 +62,7 @@ const story = new Story({
   comments:[],
   rating:[],
   likes:[],
+  reads:[]
 
 })
 try {
