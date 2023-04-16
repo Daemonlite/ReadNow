@@ -4,11 +4,11 @@ const mongoose = require('mongoose')
 const librarySchema = new mongoose.Schema({
     name:{
         type:String,
-        rquire:true
+        rquire:false
     },
     descr:{
         type:String,
-        rquire:true 
+        rquire:false 
     },
     user:{
         type:mongoose.Schema.Types.ObjectId
@@ -16,7 +16,9 @@ const librarySchema = new mongoose.Schema({
     stories:{
         type:Array
     },
-    
+    story:{
+        type:mongoose.Schema.Types.ObjectId
+    }
 },{
     timestamps:true
 })
