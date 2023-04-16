@@ -55,3 +55,30 @@ const geLibraries = async (req, res) => {
     }
     return res.status(201).json(lib);
   }
+
+  const deleteLibrary = async (req,res) => {
+    const id = req.params.id;
+
+    let library;
+    try {
+      library = await Library.findOne({ _id: id });
+      if (!library) {
+        return res
+          .status(404)
+          .json({ message: "The specified library was not found." });
+      }
+      await library.deleteOne({ _id: id });
+      await User.updateOne(
+        { _id: library.user },
+        { $pull: { librarys: { _id: library._id } } }
+      );
+    } catch (err) {
+      return res.status(500).json({
+        message:
+          "Unable to delete the  comment. An internal server error has occurred.",
+      });
+    }
+    return res
+      .status(200)
+      .json({ message: "Successfully deleted the  comment." });
+}
