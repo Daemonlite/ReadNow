@@ -21,5 +21,6 @@ app.use('/api/comments/story',require('./routes/storyCommentRoutes'))
 app.use('/api/comments/chapter',require('./routes/chapterCommentRoutes'))
 app.use('/api/story/like',require('./routes/storyLikeRoutes'))
 app.use('/api/library',require('./routes/libraryRoutes'))
+app.use('/api/subscriber',require('./routes/subscriberRoutes'))
 //server
 app.listen(port,console.log(`SERVER RUNNING ON PORT ${port}`))
