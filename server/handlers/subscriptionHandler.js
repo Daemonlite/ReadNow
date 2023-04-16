@@ -38,7 +38,7 @@ const getSubscriberById = async (req, res) => {
         console.log(error)
     }
 
-    const sub = new subrary({
+    const sub = new Subscriber({
         userName,
         userProfile
         ,user
