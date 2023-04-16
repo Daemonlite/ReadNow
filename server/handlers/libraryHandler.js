@@ -1,7 +1,7 @@
 const Library = require('../models/libraryModel')
 const User = require('../models/userModel')
 
-const geLibraries = async (req, res) => {
+const getLibraries = async (req, res) => {
     try {
       const library = await Library.find();
       res.json(library);
@@ -81,4 +81,11 @@ const geLibraries = async (req, res) => {
     return res
       .status(200)
       .json({ message: "Successfully deleted the  comment." });
+}
+
+module.exports = {
+    getlibraryById,
+    getLibraries,
+    createLibrary,
+    deleteLibrary
 }
