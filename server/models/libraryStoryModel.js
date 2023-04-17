@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
-const storySchema = new mongoose.Schema({
+
+const libraryStorySchema = new mongoose.Schema({
     title:{
         type:String,
         require:true
@@ -17,38 +18,21 @@ const storySchema = new mongoose.Schema({
         type:String,
         require:true
     },
-    chapters:{
-        type:Array
-    },
     category:{
         type:String,
         require:true
     },
-    //in order to specify age limit
-    PG:{
-        type:String,
-        require:true
+    story:{
+        type:mongoose.Schema.Types.ObjectId
     },
-    rating:{
-        type:Array
-    },
-    comments:{
-        type:Array
-      },
-      likes:{
-        type:Array
-      },
     user:{
         type:mongoose.Schema.Types.ObjectId
     },
-    reads:{
-        type:Array
-    },
-    isCompleted:{
-        type:Boolean
+    lib:{
+        type:mongoose.Schema.Types.ObjectId
     }
 },{
     timestamps:true
 })
 
-module.exports = mongoose.model('Story',storySchema)
+module.exports = mongoose.model('LibraryStory',libraryStorySchema)
