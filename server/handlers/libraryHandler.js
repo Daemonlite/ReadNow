@@ -121,10 +121,35 @@ const addStory = async (req,res) => {
     return res.status(201).json(userlib);
 }
 
+const getUserLibStory = async (req, res) => {
+  try {
+    const library = await libraryStory.find();
+    res.json(library);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Failed to retrieve Story" });
+  }
+};
+
+const getUserlibStoryById = async (req, res) => {
+  try {
+    const library = await libraryStory.findById(req.params.id);
+    if (!library) {
+      return res.status(404).json({ message: "library not found" });
+    }
+    res.json(library);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Failed to retrieve Story" });
+  }
+};
 
 module.exports = {
     getlibraryById,
     getLibraries,
     createLibrary,
-    deleteLibrary
+    deleteLibrary,
+    addStory,
+    getUserLibStory,
+    getUserlibStoryById
 }
