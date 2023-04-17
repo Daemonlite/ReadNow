@@ -16,4 +16,4 @@ const chapterLikesSchema = new mongoose.Schema({
     timeStamps:true
 })
 
-module.exports = mongoose.model('StoryLikes',chapterLikesSchema)
+module.exports = mongoose.model('ChapterLikes',chapterLikesSchema)
