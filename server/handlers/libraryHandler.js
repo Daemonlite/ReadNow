@@ -1,6 +1,6 @@
 const Library = require('../models/libraryModel')
 const User = require('../models/userModel')
-const Story = require('../models/storyModel')
+const libraryStory = require('../models/libraryStoryModel')
 
 const getLibraries = async (req, res) => {
     try {
@@ -85,11 +85,40 @@ const getLibraries = async (req, res) => {
 }
 
 const addStory = async (req,res) => {
-    const {title,coverImage,author,descr} = req.body
+    const {title,coverImage,author,descr,category,story,user,lib} = req.body
 
-    if(!title || !coverImage || !author || descr) {
+    if(!title || !coverImage || !author || !descr || !category || !user || !lib || !story) {
       return res.status(400).json({message:"fill in required fields"})
     }
+
+
+    let userLibrary;
+    try {
+      userLibrary = await Library.findById(lib)
+    } catch (error) {
+      cosole.log(error)
+    }
+
+    const userlib = new libraryStory({
+      title,
+      coverImage,
+      author,
+      descr,
+      category,
+      story,
+      user,
+      lib
+    })
+
+    try {
+      await userlib.save()
+      userLibrary.stories.unshift(userlib)
+      await  userLibrary.save()
+    } catch (error) {
+      console.log(error)
+        res.status(400).json({ error: error });
+    }
+    return res.status(201).json(userlib);
 }
 
 
