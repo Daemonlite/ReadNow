@@ -85,16 +85,11 @@ const getLibraries = async (req, res) => {
 }
 
 const addStory = async (req,res) => {
-    const {story} = req.body
+    const {title,coverImage,author,descr} = req.body
 
-    let existingStory;
-    try {
-        existingStory = await Story.findById(Story)
-    } catch (error) {
-        console.log(error)
+    if(!title || !coverImage || !author || descr) {
+      return res.status(400).json({message:"fill in required fields"})
     }
-
-    
 }
 
 
