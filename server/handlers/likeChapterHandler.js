@@ -1,5 +1,5 @@
 const chapterLike = require('../models/likeChapter')
-const Story = require('../models/storyModel')
+const Chapter = require('../models/chapterModel')
 
 const getLikes = async (req, res) => {
     try {
@@ -34,7 +34,7 @@ const likeChapter = async (req,res) => {
 
     let createdchapter;
     try {
-      createdchapter = await chapter.findById(chapter);
+      createdchapter = await Chapter.findById(chapter);
     } catch (error) {
       console.log(error);
     }
@@ -68,7 +68,7 @@ const unlikechapter = async (req,res) => {
           .json({ message: "The specified like was not found." });
       }
       await like.deleteOne({ _id: id });
-      await chapter.updateOne(
+      await Chapter.updateOne(
         { _id: like.chapter },
         { $pull: { likes: { _id: like._id } } }
       );
