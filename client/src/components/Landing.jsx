@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "@mui/material/Button";
-
+import {MdOutlinePersonalVideo} from 'react-icons/md'
+import {TfiVideoClapper} from 'react-icons/tfi'
+import {BsBook} from 'react-icons/bs'
 const Landing = () => {
   return (
     <>
@@ -31,20 +33,26 @@ const Landing = () => {
         <h3 className="sec-head">we make your story...</h3>
 
         <div className="sec">
-          <div className="icon"></div>
+        <div className="dip">
+        <div className="icon"><MdOutlinePersonalVideo size='30'/></div>
           <div className="text">Get produced to movie or film</div>
-
-          <div className="icon"></div>
-          <div className="text">Get adapted to a TV series</div>
-
-          <div className="icon"></div>
-          <div className="text">Get published</div>
         </div>
+          <div className="dip">
+        <div className="icon"><TfiVideoClapper  size='30'/></div>
+          <div className="text">Get adapted to a TV series</div>
+        </div>
+
+        <div className="dip">
+        <div className="icon"><BsBook size='30'/></div>
+          <div className="text">Get published soon</div>
+        </div>
+        </div>
+
+        
       </section>
 
-  
       <section className="land">
-      <div className="image">
+        <div className="image">
           <img
             src="https://www.wattpad.com/img//landing/wattpadStudiosPoster.png"
             alt=""
@@ -53,13 +61,13 @@ const Landing = () => {
         </div>
 
         <div className="head">
-        <h3 className="headText">ReadNow Studios</h3>
+          <h3 className="headText">ReadNow Studios</h3>
           <h3 className="headText">Your story could be the next big hit</h3>
           <p className="head-para">
-          Wattpad Studios discovers untapped, unsigned, and talented writers on Wattpad and connects them to global multi-media entertainment companies.
-          Wattpad Studios works with partners such as:
+            Wattpad Studios discovers untapped, unsigned, and talented writers
+            on Wattpad and connects them to global multi-media entertainment
+            companies. Wattpad Studios works with partners such as:
           </p>
-
         </div>
       </section>
     </>
