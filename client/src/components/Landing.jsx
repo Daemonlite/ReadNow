@@ -31,7 +31,7 @@ const Landing = () => {
       </div>
       <section>
         <h3 className="sec-head">we make your story...</h3>
-
+<br />
         <div className="sec">
         <div className="dip">
         <div className="icon"><MdOutlinePersonalVideo size='30'/></div>
@@ -51,14 +51,8 @@ const Landing = () => {
         
       </section>
 
-      <section className="land">
-        <div className="image">
-          <img
-            src="https://www.wattpad.com/img//landing/wattpadStudiosPoster.png"
-            alt=""
-            className="comp"
-          />
-        </div>
+      <section className="landi">
+    
 
         <div className="head">
           <h3 className="headText">ReadNow Studios</h3>
@@ -67,9 +61,51 @@ const Landing = () => {
             Wattpad Studios discovers untapped, unsigned, and talented writers
             on Wattpad and connects them to global multi-media entertainment
             companies. Wattpad Studios works with partners such as:
+            <div className="ics">
+                <img src="https://www.wattpad.com/img//landing/sony.svg" alt='/log' />
+                <img src="https://www.wattpad.com/img//landing/hulu.svg" alt='/log' />
+                <img src="https://www.wattpad.com/img//landing/syfy.svg" alt='/log' />
+            </div>
           </p>
         </div>
+
+        <div className="image">
+          <img
+            src="https://www.wattpad.com/img//landing/wattpadStudiosPoster.png"
+            alt=""
+            className="comp"
+          />
+        </div>
       </section>
+      <br />
+      <br />
+      <br />
+     <a href="/things" className="texts">Find out more about what we do for writers →</a>
+      <section className="landi">
+    
+
+    <div className="head">
+      <h3 className="headText">ReadNow Books</h3>
+      <h3 className="headText">Your voice belongs on bookshelves</h3>
+      <p className="head-para">
+    ReadNow Books aspires to recognize and reflect diverse voices by taking Wattpad stories to published book and onto bookshelves around the world.
+    ReadNow Books works with partners such as:
+        <div className="ics">
+            <img src="https://www.wattpad.com/img//landing/macmillan.png" alt='log' className="ippy"/>
+            <img src="https://www.wattpad.com/img//landing/anvil.png" alt='log' className="ippy"/>
+            <img src="https://www.wattpad.com/img//landing/penguin.png" alt='log'className="ippy" />
+        </div>
+      </p>
+    </div>
+
+    <div className="image">
+      <img
+        src="https://www.wattpad.com/img//landing/wattpadBooksPoster.png"
+        alt=""
+        className="compi"
+      />
+    </div>
+  </section>
     </>
   );
 };
