@@ -3,6 +3,11 @@ import Button from "@mui/material/Button";
 import {MdOutlinePersonalVideo} from 'react-icons/md'
 import {TfiVideoClapper} from 'react-icons/tfi'
 import {BsBook} from 'react-icons/bs'
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
 const Landing = () => {
   return (
     <>
@@ -106,6 +111,124 @@ const Landing = () => {
       />
     </div>
   </section>
+  <h4 className="text">Browse our wide range of Categories</h4>
+  <main className="dlex">
+  
+
+    <Card sx={{ maxWidth: 345 }} className='grid'>
+      <CardMedia
+        sx={{ height: 240 }}
+        image="https://images.unsplash.com/photo-1567263361507-83f755d9fa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9ycm9yfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+       Horror
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         lorem ipsum dolor sot sit amet cosectuer adifisit meliopsis
+          slorem ipsum dolor sot sit amet cosectuer adifisit meliopsis
+        </Typography>
+      </CardContent>
+      <CardActions>
+      </CardActions>
+    </Card>
+
+    <Card sx={{ maxWidth: 345 }} className='grid'>
+      <CardMedia
+        sx={{ height: 240 }}
+        image="https://images.unsplash.com/photo-1567263361507-83f755d9fa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9ycm9yfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+       Horror
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         lorem ipsum dolor sot sit amet cosectuer adifisit meliopsis
+          slorem ipsum dolor sot sit amet cosectuer adifisit meliopsis
+        </Typography>
+      </CardContent>
+      <CardActions>
+      </CardActions>
+    </Card>
+
+    <Card sx={{ maxWidth: 345 }} className='grid'>
+      <CardMedia
+        sx={{ height: 240 }}
+        image="https://images.unsplash.com/photo-1567263361507-83f755d9fa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9ycm9yfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+       Horror
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         lorem ipsum dolor sot sit amet cosectuer adifisit meliopsis
+          slorem ipsum dolor sot sit amet cosectuer adifisit meliopsis
+        </Typography>
+      </CardContent>
+      <CardActions>
+      </CardActions>
+    </Card>
+
+    <Card sx={{ maxWidth: 345 }} className='grid'>
+      <CardMedia
+        sx={{ height: 240 }}
+        image="https://images.unsplash.com/photo-1567263361507-83f755d9fa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9ycm9yfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+       Horror
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         lorem ipsum dolor sot sit amet cosectuer adifisit meliopsis
+          slorem ipsum dolor sot sit amet cosectuer adifisit meliopsis
+        </Typography>
+      </CardContent>
+      <CardActions>
+      </CardActions>
+    </Card>
+
+    <Card sx={{ maxWidth: 345 }} className='grid'>
+      <CardMedia
+        sx={{ height: 240 }}
+        image="https://images.unsplash.com/photo-1567263361507-83f755d9fa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9ycm9yfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+       Horror
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         lorem ipsum dolor sot sit amet cosectuer adifisit meliopsis
+          slorem ipsum dolor sot sit amet cosectuer adifisit meliopsis
+        </Typography>
+      </CardContent>
+      <CardActions>
+      </CardActions>
+    </Card>
+
+    <Card sx={{ maxWidth: 345 }} className='grid'>
+      <CardMedia
+        sx={{ height: 240 }}
+        image="https://images.unsplash.com/photo-1567263361507-83f755d9fa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG9ycm9yfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+       Horror
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         lorem ipsum dolor sot sit amet cosectuer adifisit meliopsis
+          slorem ipsum dolor sot sit amet cosectuer adifisit meliopsis
+        </Typography>
+      </CardContent>
+      <CardActions>
+      </CardActions>
+    </Card>
+  </main>
     </>
   );
 };
