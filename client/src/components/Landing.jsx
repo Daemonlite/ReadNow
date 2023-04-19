@@ -56,7 +56,7 @@ const Landing = () => {
 
         <div className="head">
           <h3 className="headText">ReadNow Studios</h3>
-          <h3 className="headText">Your story could be the next big hit</h3>
+          <h3 className="headtext">Your story could be the next hit</h3>
           <p className="head-para">
             Wattpad Studios discovers untapped, unsigned, and talented writers
             on Wattpad and connects them to global multi-media entertainment
@@ -85,7 +85,7 @@ const Landing = () => {
     
 
     <div className="head">
-      <h3 className="headText">ReadNow Books</h3>
+      <h3 className="headText">ReadNow Books </h3>
       <h3 className="headText">Your voice belongs on bookshelves</h3>
       <p className="head-para">
     ReadNow Books aspires to recognize and reflect diverse voices by taking Wattpad stories to published book and onto bookshelves around the world.

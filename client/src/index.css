@@ -1,5 +1,6 @@
 *{
   font-family:Georgia, 'Times New Roman', Times, serif;
+  box-sizing: border-box;
 }
 .land{
   margin-top: 100px;
@@ -9,6 +10,10 @@
   margin-left: 30px;
 }
 .headText{
+  margin-left: 30px;
+  color: #555;
+}
+.headtext{
   margin-left: 30px;
   color: #555;
 }
@@ -76,4 +81,21 @@
   .small{
     display:block !important;
   }
+.headText{
+  margin-left: 40px;
+}
+.head-para{
+  width: 385px;
+}
+.head{
+  margin-top: -40px;
+}
+.headtext{
+  width: 350px;
+}
+.texts{
+  margin-left: 5px;
+  
+}
+
 }
