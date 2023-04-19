@@ -76,7 +76,30 @@
 .small{
   display:none !important;
 }
+.dropdown-menu{
+  color: #fff !important;
+  margin-right: 20px;
+  margin-top: 10px;
+}
 
+.navigate{
+  display: flex;
+  justify-content: center;
+}
+
+.text{
+  text-align:center;
+  margin-top: 30px;
+}
+.grid{
+  margin: 20px;
+  
+}
+.dlex{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 @media only screen and (max-width: 768px) {
   .small{
     display:block !important;
