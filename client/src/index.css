@@ -100,6 +100,19 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.google{
+  border: 1px solid #ccc;
+  width: 200px;
+  height: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 15px;
+ color: #555;
+ display: flex;
+ gap: 10px;
+}
 @media only screen and (max-width: 768px) {
   .small{
     display:block !important;
