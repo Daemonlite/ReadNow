@@ -74,7 +74,7 @@ const Login = () => {
     or
   </div>
   <a  className='google' href="/register">
-   register
+  create an account
   </a>
  </div>
 
