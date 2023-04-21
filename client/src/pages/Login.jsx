@@ -17,7 +17,7 @@ const Login = () => {
     const Password = `${userObject.given_name}wegvfejwy1@`
     // Use the decoded JWT ID token to log the user in
     axios
-      .post("http://localhost:7000/api/users/login/", {
+      .post("http://localhost:8000/api/users/login/", {
         email: userObject.email,
         password: Password,
       })
@@ -52,7 +52,7 @@ const Login = () => {
   },[])
   google.accounts.id.prompt()
   return (
-    <div>
+    <div className='log'>
         <Stack
       component="form"
       sx={{

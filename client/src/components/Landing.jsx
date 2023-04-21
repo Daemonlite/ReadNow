@@ -21,7 +21,7 @@ const Landing = () => {
           </p>
 
           <div className="btns">
-            <Button variant="contained">Start Reading</Button>
+            <Button variant="contained" href='/login'>Start Reading</Button>
             <Button variant="outlined">Publish your Story</Button>
           </div>
         </div>

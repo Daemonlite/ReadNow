@@ -13,7 +13,7 @@ function App() {
      <Topnav/>
      <Routes>
     <Route path='/' element={<Landing/>}/>
-    <Routes path='/login' element={<Login/>} />
+    <Route path='/login' element={<Login/>} />
      </Routes>
      </BrowserRouter>
     </div>
