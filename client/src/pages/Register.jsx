@@ -75,7 +75,7 @@ const Register = () => {
       
     >
  <div className="infos">
-  <h3 className="log-head">Create a ReadNow</h3>
+  <h3 className="log-head">Create a ReadNow Account</h3>
  <div id="signInDiv" className='google'></div>
   <div  className='google'>
     sign in with Facebook
