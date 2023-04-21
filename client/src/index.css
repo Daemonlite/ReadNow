@@ -114,7 +114,30 @@
  gap: 10px;
 }
 .log{
-  margin-top: 100PX;
+  margin-top: 100px;
+  border: 1px solid #000;
+  height: 400px;
+  width: 40%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 450px;
+
+}
+
+.infos{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.or{
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color:#000;
 }
 @media only screen and (max-width: 768px) {
   .small{
