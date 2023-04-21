@@ -4,9 +4,12 @@ import { useNavigate } from "react-router-dom";
 import jwt_decode from 'jwt-decode'
 import { useState,useEffect } from "react";
 import Stack from '@mui/material/Stack';
+import { LoginSocialFacebook } from "reactjs-social-login";
+import { FacebookLoginButton } from "react-social-login-buttons";
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setpassword] = useState("");
+    const [profile,setProfile] = useState([])
     const navigate = useNavigate()
 
 
@@ -68,7 +71,18 @@ const Login = () => {
   <h3 className="log-head">Login to ReadNow</h3>
  <div id="signInDiv" className='google'></div>
   <div  className='google'>
-    sign in with Facebook
+  <LoginSocialFacebook
+          appId="254106580416175"
+          onResolve={(response) => {
+            console.log(response);
+            setProfile(response.data);
+          }}
+          onReject={(error) => {
+            console.log(error);
+          }}
+        >
+          <FacebookLoginButton />
+        </LoginSocialFacebook>
   </div>
   <div className="or">
     or
