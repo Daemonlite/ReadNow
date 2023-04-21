@@ -44,7 +44,7 @@ const Register = () => {
           setEmail("");
         })
         .catch((err) => {
-          toast.error(err.message)
+            toast.error(JSON.stringify(err.response.data));
         });
         
           }
@@ -83,7 +83,7 @@ const Register = () => {
   <div className="or">
     or
   </div>
-  <a  className='google' href="/register">
+  <a  className='google' href="/login">
   Log into  account
   </a>
  </div>

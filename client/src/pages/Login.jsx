@@ -31,7 +31,7 @@ const Login = () => {
         setEmail("");
       })
       .catch((err) => {
-       toast.error("Login failed check credentials");
+       toast.error(JSON.stringify(err.response.data));
       });
   }
   
