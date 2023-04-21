@@ -53,7 +53,7 @@ const Login = () => {
   google.accounts.id.prompt()
   return (
     <div className='log'>
-        <Stack
+    <Stack
       component="form"
       sx={{
         width: '45ch',
@@ -61,13 +61,23 @@ const Login = () => {
       spacing={2}
       noValidate
       autoComplete="off"
-      className='form-group fis'
+      className='fis'
       
     >
-  <div id="signInDiv" className='google'></div>
+ <div className="infos">
+  <h3 className="log-head">Login to ReadNow</h3>
+ <div id="signInDiv" className='google'></div>
   <div  className='google'>
     sign in with Facebook
   </div>
+  <div className="or">
+    or
+  </div>
+  <a  className='google' href="/register">
+   register
+  </a>
+ </div>
+
     </Stack>
     </div>
   )
