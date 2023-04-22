@@ -34,7 +34,7 @@ const Landing = () => {
           />
         </div>
       </div>
-      <section>
+      <section className="out">
         <h3 className="sec-head">we make your story...</h3>
         <br />
         <div className="sec">
@@ -97,7 +97,7 @@ const Landing = () => {
       <br />
       <br />
       <a href="/things" className="texts">
-        Find out more about what we do for writers →
+        Find out about what we do for writers →
       </a>
       <section className="landi">
         <div className="head">
