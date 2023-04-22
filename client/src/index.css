@@ -114,7 +114,7 @@
   margin-top: 100px;
   border: 1px solid #fff;
   height: 400px;
-  width: 40%;
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,9 +135,27 @@
 .or {
   text-align: center;
 }
-a {
+a{
   text-decoration: none;
   color: #000;
+}
+
+.home{
+  margin-top:100px;
+}
+.links{
+  text-decoration: none;
+  color: #fff;
+}
+.list{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 10px;
+}
+.nav-link{
+  color:#fff !important;
+  display:flex !important;
 }
 @media only screen and (max-width: 768px) {
   .small {
@@ -157,5 +175,8 @@ a {
   }
   .texts {
     margin-left: 5px;
+  }
+  .list, .navigate{
+    display:none;
   }
 }
