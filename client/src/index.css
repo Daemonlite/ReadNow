@@ -157,6 +157,14 @@ a{
   color:#fff !important;
   display:flex !important;
 }
+.acc{
+  color:#fff;
+  margin-top:13px;
+  margin-left: 10px;
+}
+.menu{
+  color:#fff;
+}
 @media only screen and (max-width: 768px) {
   .small {
     display: block !important;
@@ -173,10 +181,8 @@ a{
   .headtext {
     width: 350px;
   }
-  .texts {
-    margin-left: 5px;
-  }
-  .list, .navigate{
+
+  .list, .navigate, .out,.texts{
     display:none;
   }
 }
