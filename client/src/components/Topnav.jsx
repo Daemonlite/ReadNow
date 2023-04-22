@@ -1,17 +1,17 @@
 import * as React from 'react';
-// import Button from '@mui/material/Button';
-// import Menu from '@mui/material/Menu';
-// import MenuItem from '@mui/material/MenuItem';
-// import Box from '@mui/material/Box';
-// import Avatar from '@mui/material/Avatar';
-// import ListItemIcon from '@mui/material/ListItemIcon';
-// import Divider from '@mui/material/Divider';
-// import IconButton from '@mui/material/IconButton';
-// import Typography from '@mui/material/Typography';
-// import Tooltip from '@mui/material/Tooltip';
-// import PersonAdd from '@mui/icons-material/PersonAdd';
-// import Settings from '@mui/icons-material/Settings';
-// import Logout from '@mui/icons-material/Logout';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Box from '@mui/material/Box';
+import Avatar from '@mui/material/Avatar';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Tooltip from '@mui/material/Tooltip';
+import PersonAdd from '@mui/icons-material/PersonAdd';
+import Settings from '@mui/icons-material/Settings';
+import Logout from '@mui/icons-material/Logout';
 const Topnav = () => {
 
 
@@ -29,31 +29,15 @@ const Topnav = () => {
   <div className="container-fluid">
     <a className="navbar-brand" href="/home">ReadNow</a>
 {/* nav links here */}
-
+<ul className='list'>
+  <li><a href='/home' className='links'>Home</a></li>
+  <li><a href='/home' className='links'>Top Stories</a></li>
+  <li><a href='/home' className='links'>Trending</a></li>
+  <li><a href='/home' className='links'>Events</a></li>
+  
+</ul>
 <div className='navigate'>
-      {/* <Button
-        id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
-       Writer Opportunity
-      </Button>
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
-      >
-        <MenuItem onClick={handleClose}>Writer Resources </MenuItem>
-        <MenuItem onClick={handleClose}>Writer Programmes</MenuItem>
-        <MenuItem onClick={handleClose}>Writer Contests</MenuItem>
-      </Menu>
-
+   
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
         <Typography sx={{ minWidth: 100 }}>Contact</Typography>
         <Typography sx={{ minWidth: 100 }}>Profile</Typography>
@@ -130,7 +114,7 @@ const Topnav = () => {
           </ListItemIcon>
           Logout
         </MenuItem>
-      </Menu> */}
+      </Menu>
     </div>
     <button className="navbar-toggler small" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
